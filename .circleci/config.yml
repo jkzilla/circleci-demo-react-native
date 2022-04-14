@@ -145,7 +145,7 @@ jobs:
             mv fastlane/report.xml test-results/fastlane
 
       - store_test_results:
-          path: test-results
+          path: test-results 
 
       - store_artifacts:
           path: test-results
@@ -156,5 +156,5 @@ workflows:
       - macos-build-and-test:
           filters:
             tags:
-              only: "1.1"
+              only: /^v.*/
             
