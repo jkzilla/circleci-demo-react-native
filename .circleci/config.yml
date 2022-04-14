@@ -59,8 +59,8 @@ jobs:
 
     steps:
       - checkout
-      - ruby/install-deps
-          app-dir: ./ios
+      - ruby/install-deps:
+          app-dir: ios
       - restore_cache:
           key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
 
