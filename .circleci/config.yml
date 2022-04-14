@@ -148,7 +148,7 @@ jobs:
           path: test-results 
 
       - store_artifacts:
-          path: test-results
+          path: test-results 
 
 workflows:
   node-android-ios:
@@ -156,5 +156,5 @@ workflows:
       - macos-build-and-test:
           filters:
             tags:
-              only: /^v.*/
+              only: "1.3"
             
