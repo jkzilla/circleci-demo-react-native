@@ -153,7 +153,7 @@ jobs:
 workflows:
   node-android-ios:
     jobs:
-      - macos-build-and-testyy:
+      - macos-build-and-test:
           filters:
             tags:
               only: "1.1"
