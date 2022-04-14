@@ -158,5 +158,5 @@ workflows:
             branches:
               only: master            
             tags:
-              only: /manual-nightly1/
+              only: /atest/
             
