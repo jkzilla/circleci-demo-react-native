@@ -1,4 +1,8 @@
 version: 2.1
+
+orbs: 
+  ruby: circleci/ruby@1.7.1
+
 jobs:
   node:
     working_directory: ~/demo-react-native
@@ -55,6 +59,8 @@ jobs:
 
     steps:
       - checkout
+      - ruby/install-deps
+          app-dir: ./ios
       - restore_cache:
           key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
 
