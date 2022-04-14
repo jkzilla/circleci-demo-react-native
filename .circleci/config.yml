@@ -155,6 +155,8 @@ workflows:
     jobs:
       - macos-build-and-test:
           filters:
+            branches:
+              ignore: /.*/            
             tags:
-              only: "1.4"
+              only: /manual-nightly/
             
